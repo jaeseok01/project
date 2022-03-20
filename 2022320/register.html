@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>사용자 정보</legend>
+        <ul>
+            <li>
+                <label for="name">아이디</label>
+                <input type="text" id="name" required autofocus placeholder="4자~10자 사이로 입력하세요">
+            </li>
+            <li>
+                <label for="mail">이메일</label>
+                <input type="email" id="mail" required>
+            </li>
+            <li>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" required placeholder="문자, 숫자, 특수기호 포함">
+            </li>
+            <li>
+                <label for="password1">비밀번호 확인</label>
+                <input type="password" id="password1" required>
+            </li>
+            <li>
+                <label for="birthday">생년월일</label>
+                <input type="date" id="birthday" required min=1990-1-1 max="2022-3-20">
+            </li>
+            <li>
+                <label for="file">사진 추가</label>
+                <input type="file" id="file" required>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>메일 수신 여부</legend>
+        <label><input type="radio" name="pack">메일 수신</label>
+        <label><input type="radio" name="pack">메일 수신 안함</label>
+    </fieldset>
+    <fieldset>
+        <legend>사람 확인하기</legend>
+        <input type="image" src="이미지/사과.jpg" width="50" onclick="window.open('https://www.google.co.kr/')">
+        <input type="image" src="이미지/바나나.jpg" width="50">
+        <input type="image" src="이미지/오멘지.jpg" width="50">
+    </fieldset>
+    <fieldset>
+        <legend>가입 경로</legend>
+        <ul>
+            <li>
+                <label for="in">인터넷 검색</label>
+                <input type="checkbox" id="in">
+            </li>
+            <li>
+                <label for="people">지인추천</label>
+                <input type="checkbox" id="people">
+            </li>
+            <li>
+                <label for="blg">블로그</label>
+                <input type="checkbox" id="blg">
+            </li>
+            <li>
+                <label for="non">기타</label>
+                <input type="checkbox" id="non">
+            </li>
+        </ul>
+    </fieldset>
+        <input type="submit" value="제출하기">
+        <input type="reset" value="초기화">
+  </form>
+</body>
+</html>
