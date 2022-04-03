@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문제 풀기</title>
+    <style>
+        #container {
+            width: 500px;
+            border: 1px solid black;
+            height: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="color:white; background-color:black; margin:0px; text-align:center;">퀴즈</h1>
+        <p>※10점 만점</p>
+        <div class="quiz" style="padding: 20px 0px;">
+        <h2 id="quiz1">Q1.</h2>
+            <h3>국보 1호인 문화재의 이름은?<small>(1점)</small></h3>
+    <hr>
+        <div>
+            <div id="one1" style="width: 15%; float:left;">동대문</div>
+            <div id="two1" style="width: 15%; float:left;">숭례문</div>
+            <div id="three1" style="width: 15%; float:left;">경복궁</div>
+            <div id="four1" style="width: 15%; float:left;">창덕궁</div>
+            <div id="five1" style="width: 15%; float:left;">덕수궁</div>
+        </div>
+        </div>
+        <div class="quiz" style="padding: 20px 0px;">
+                <h2 id="quiz2">Q2.</h2>
+                <h3>태양계에서 가장 큰 행성은?<small>(1점)</small></h3>
+            <hr>
+            <div>
+                <div id="one2" style="width: 15%; float:left;">지구</div>
+                <div id="two2" style="width: 15%; float:left;">태양</div>
+                <div id="three2" style="width: 15%; float:left;">금성</div>
+                <div id="four2" style="width: 15%; float:left;">목성</div>
+                <div id="five2" style="width: 15%; float:left;">천왕성</div>
+            </div>
+        </div>
+        <div class="quiz" style="padding: 20px 0px;">
+            <h2 id="quiz3">Q3.</h2>
+            <h3>(OX 퀴즈)고래도 생선이다<small>(1점)</small></h3>
+            <hr>
+            <div>
+                <div id="one3" style="width: 15%; float:left;">O</div>
+                <div id="two3" style="width: 15%; float:left;">X</div>
+            </div>
+        </div>
+        <div class="quiz" style="padding: 20px 0px;">
+        <h2 id="quiz4">Q4.</h2>
+        <h3>(OX 퀴즈)개미는 63빌딩에서 떨어지면 죽는다<small>(2점)</small></h3>
+        <hr>
+            <div>
+                <div id="one4" style="width: 15%; float:left;">O</div>
+                <div id="two4" style="width: 15%; float:left;">X</div>
+            </div>
+        </div>
+        <div class="quiz" style="padding: 20px 0px;">
+        <h2 id="quiz5">Q5.</h2>
+        <h3>(OX 퀴즈)물고기도 귀가 있다<small>(2점)</small></h3>
+        <hr>
+            <div>
+                <div id="one5" style="width: 15%; float:left;">O</div>
+                <div id="two5" style="width: 15%; float:left;">X</div>
+            </div>
+        </div>
+        <div class="quiz" style="padding: 20px 0px;">
+        <h2 id=quiz6>Q6.</h2>
+        <h3>한글을 만든 왕의 이름은?<small>(3점)</small></h3>
+        <hr>
+        <input type="text" id="answer1"></div>
+    </div>
+    <button type="submit" id="submit">제출</button>
+    <script>
+        var count =0;
+        var submit =document.querySelector('#submit');
+        submit.onclick = function() {
+            var quiz1 = document.querySelector('#quiz1');
+            var quiz2 = document.querySelector('#quiz2');
+            var quiz3 = document.querySelector('#quiz3');
+            var quiz4 = document.querySelector('#quiz4');
+            var quiz5 = document.querySelector('#quiz5');
+            var quiz6 = document.querySelector('#quiz6');
+            alert(count+"점입니다");
+            if (time == 2){
+                two1.style.color = "green";
+                quiz1.style.color = "green";
+            }
+            else if (time != 2) {
+                two1.style.color = "green";
+                quiz1.style.color = "red";
+                if (time == 1) {
+                    one1.style.color = "red";
+                }
+                else if (time == 3) {
+                    three1.style.color = "red";
+                }
+                else if (time == 4) {
+                    four1.style.color = "red";
+                }
+                else if (time == 5) {
+                    five1.style.color = "red";
+                }
+            }
+            if (time2 == 4){
+                four2.style.color = "green";
+                quiz2.style.color = "green";
+            }
+            else if (time2 != 4) {
+                four2.style.color = "green";
+                quiz2.style.color = "red";
+                if (time2 == 1) {
+                    one2.style.color = "red";
+                }
+                else if (time2 == 3) {
+                    three2.style.color = "red";
+                }
+                else if (time2 == 2) {
+                    two2.style.color = "red";
+                }
+                else if (time2 == 5) {
+                    five2.style.color = "red";
+                }
+            }
+            if (time3 == 2){
+                two3.style.color = "green";
+                quiz3.style.color = "green";
+            }
+            else if (time3 == 1) {
+                one3.style.color = "red";
+                two3.style.color = "green";
+                quiz3.style.color = "red";
+            }
+            else if (time3 != 2) {
+                two3.style.color = "green";
+                quiz3.style.color = "red";
+            }
+            if (time4 == 2){
+                two4.style.color = "green";
+                quiz4.style.color = "green";
+            }
+            else if (time4 == 1) {
+                one4.style.color = "red";
+                two4.style.color = "green";
+                quiz4.style.color = "red";
+            }
+            else if (time4 != 2) {
+                two4.style.color = "green";
+                quiz4.style.color = "red";
+            }
+            if (time5 == 1){
+                one5.style.color = "green";
+                quiz5.style.color = "green";
+            }
+            else if (time5 == 2) {
+                two5.style.color = "red";
+                one5.style.color = "green";
+                quiz5.style.color = "red";
+            }
+            else if (time5 != 1) {
+                one5.style.color = "green";
+                quiz5.style.color = "red";
+            }
+        }
+        var time = 0;
+        var one1 = document.querySelector('#one1');
+        one1.onclick = function() {
+            if (time == 0) {
+                one1.style.color = "blue";
+                time += 1;
+            }
+        }
+        var two1 = document.querySelector('#two1');
+        two1.onclick = function() {
+            if (time == 0) {
+                two1.style.color = "blue";
+            count += 1;
+            time += 2;
+            }
+        }
+        var three1 = document.querySelector('#three1');
+        three1.onclick = function() {
+            if (time == 0) {
+                three1.style.color = "blue";
+                time += 3;
+            }
+        }
+        var four1 = document.querySelector('#four1');
+        four1.onclick = function() {
+            if (time == 0) {
+                four1.style.color = "blue";
+                time += 4;
+            }
+        }
+        var five1 = document.querySelector('#five1');
+        five1.onclick = function() {
+            if (time == 0) {
+                five1.style.color = "blue";
+                time += 5;
+            }
+        }
+        var time2 = 0;
+        var one2 = document.querySelector('#one2');
+        one2.onclick = function() {
+            if (time2 == 0) {
+                one2.style.color = "blue";
+                time2 += 1;
+            }
+        }
+        var two2 = document.querySelector('#two2');
+        two2.onclick = function() {
+            if (time2 == 0) {
+                two2.style.color = "blue";
+                time2 += 2;
+            }
+        }
+        var three2 = document.querySelector('#three2');
+        three2.onclick = function() {
+            if (time2 == 0) {
+                three2.style.color = "blue";
+                time2 += 3;
+            }
+        }
+        var four2 = document.querySelector('#four2');
+        four2.onclick = function() {
+            if (time2 == 0) {
+                four2.style.color = "blue";
+                count += 1;
+                time2 += 4;
+            }
+        }
+        var five2 = document.querySelector('#five2');
+        five2.onclick = function() {
+            if (time2 == 0) {
+                five2.style.color = "blue";
+                time2 += 5;
+            }
+        }
+        var time3 = 0;
+        var one3 = document.querySelector('#one3');
+        one3.onclick = function() {
+            if (time3 == 0) {
+                one3.style.color = "blue";
+                time3 += 1;
+            }
+        }
+        var two3 = document.querySelector('#two3');
+        two3.onclick = function() {
+            if (time3 == 0) {
+                two3.style.color = "blue";
+                time3 += 2;
+                count += 1;
+            }
+        }
+        var time4 = 0;
+        var one4 = document.querySelector('#one4');
+        one4.onclick = function() {
+            if (time4 == 0) {
+                one4.style.color = "blue";
+                time4 += 1;
+            }
+        }
+        var two4 = document.querySelector('#two4');
+        two4.onclick = function() {
+            if (time4 == 0) {
+                two4.style.color = "blue";
+                time4 += 2;
+                count += 2;
+            }
+        }
+        var time5 = 0;
+        var one5 = document.querySelector('#one5');
+        one5.onclick = function() {
+            if (time5 == 0) {
+                count += 2;
+                one5.style.color = "blue";
+                time5 += 1;
+            }
+        }
+        var two5 = document.querySelector('#two5');
+        two5.onclick = function() {
+            if (time5 == 0) {
+                two5.style.color = "blue";
+                time5 += 2;
+            }
+        var answer = document.querySelector('#answer1');
+
+        }
+    </script>
+</body>
+</html>
